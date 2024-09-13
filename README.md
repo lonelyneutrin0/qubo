@@ -10,6 +10,7 @@ Number of Iterations: `1000000`
 ### Issues 
 Because of its heavy reliance on randomness, the time taken to find optima can be excessive for larger solution spaces. The next method aims to resolve this issue by reducing the magnitude of local minima.
 ### Benchmark
+Benchmark tests were carried out on 10x10 matrices with sufficient iterations to get ~99% accuracy.
 Number of Trials: `100` <br/>
 Average Time: `9.48s`
 ## Simulated Annealing with Stochastic Tunneling 
