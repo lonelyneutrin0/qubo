@@ -10,5 +10,5 @@ Number of Iterations: `1000000`
 ### Issues 
 Because of its heavy reliance on randomness, the time taken to find optima can be excessive for larger solution spaces. The next method aims to resolve this issue by reducing the magnitude of local minima.
 
-### Simulated Annealing with Stochastic Tunneling 
+## Simulated Annealing with Stochastic Tunneling 
 Stochastic Tunneling, or STUN is an adaptation of Monte Carlo methods. It tackles the issue of long computation times by transforming the objective function in such a way that local minima are flattened and the global minimum is amplified. The transformation for an objective function f(x) is given by $$T(x) = 1-e^{-(f(x)-f(x_0))}$$ where $f(x_0)$ is the lowest function value found so far. It is possible to continuously transform the objective function or do so only when stuck at a local minimum.
