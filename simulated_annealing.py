@@ -14,8 +14,8 @@ def prob(old, new, temp):
 def optimize(iterations, objective_matrix): 
     # Parameters
     _ = np.vectorize(lambda x: -100*math.log(x) + math.log(iterations)*100)
-    temps = _(np.linspace(1, iterations-1, iterations-1))
-
+    temps = 100*(-np.log(np.linspace(1, iterations-1, iterations-1)) + math.log(iterations))
+    
     # Matrices/Vectors
     vec_i = np.full((objective_matrix.shape[0]),0, dtype=bool)
     vec_i[random.randint(0, vec_i.size-1)] = 1
