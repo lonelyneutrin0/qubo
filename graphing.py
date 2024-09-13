@@ -19,6 +19,6 @@ for i in bit_vectors:
     normal.append(ob(np.asarray(i), matrix=matrix))
     transformed.append(transform(np.asarray(i), matrix=matrix, min=np.min(np.diagonal(matrix))))
 plt.plot(x,normal, label = "f(x)")
-plt.plot(x, transformed, label = np.min(np.diagonal(matrix)))
+plt.plot(x, transformed, label = "STUN f(x)")
 plt.legend()
 plt.show()
