@@ -7,7 +7,7 @@ import itertools
 import random
 import math
 
-order = 10
+order = 4
 def generate_bit_vectors(n):
     return list(itertools.product([0, 1], repeat=n))
 bit_vectors = generate_bit_vectors(order)

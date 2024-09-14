@@ -3,20 +3,8 @@ import numpy as np
 import random
 import math
 import matplotlib.pyplot as plt
-# Functions
-def ob(vec, matrix): 
-    if(matrix.shape[0] != vec.size): return
-    return np.dot(vec, np.dot(matrix, vec))
-
-def prob(old, new, temp): 
-    try: 
-        math.exp(-(new-old)/(temp))
-        # print(math.exp(-(new-old)/(temp)))
-    except OverflowError: 
-        return 1
-    return math.exp(-(new-old)/(temp))
-def transform(vec, matrix, min): 
-    return 1-(math.exp(-10*(np.dot(vec, np.dot(matrix, vec))-min)))
+# import the required functions 
+from functions import ob,prob,transform
 
 def stochastic_tunnel_optimize(iterations, objective_matrix): 
     # Parameters
