@@ -26,7 +26,7 @@ for i in bit_vectors:
 for j in anneal[3]:
     new_arr =[] 
     for i in bit_vectors:
-        new_arr.append(transform(i, matrix, j))
+        new_arr.append(transform(i, matrix, j, 0.5))
     transformations.append(new_arr)
 plt.plot(x,normal, label = "f(x)")
 j=0
@@ -35,7 +35,7 @@ for i in transformations:
     plt.plot(x, i, label=anneal[3][j])
     plt.pause(1)
     j+=1
-print("Done")
+print(np.min(np.diagonal(matrix)))
 print(np.min(np.diagonal(matrix))==ob(anneal[0],matrix))
 print(np.sum(np.where(np.all(bit_vectors == anneal[0], axis=1)))+1)
 # plt.plot(np.linspace(1, len(anneal[1]), len(anneal[1])), np.full(len(anneal[1]), np.min(np.diagonal(matrix))), label="Function Minimum")
