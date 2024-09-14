@@ -15,3 +15,11 @@ Number of Trials: `100` <br/>
 Average Time: `9.48s`
 ## Simulated Annealing with Stochastic Tunneling 
 Stochastic Tunneling, or STUN is an adaptation of Monte Carlo methods. It tackles the issue of long computation times by transforming the objective function in such a way that local minima are flattened and the global minimum is amplified. The transformation for an objective function f(x) is given by $$T(x) = 1-e^{-(f(x)-f(x_0))}$$ where $f(x_0)$ is the lowest function value found so far. It is possible to continuously transform the objective function or do so only when stuck at a local minimum.
+
+The next phases of this project will aim to utilize simulated annealing paired with stochastic tunneling to optimize a wide range of QUBO problems. The hyperparameters of the project are <br/> 
+`Number of iterations` <br/>
+`STUN parameter` <br/>
+I will attempt to optimize them using the following methods: <br/> 
+### Adaptive Simulated Annealing
+### Bayesian Optimization
+### Machine Learning
