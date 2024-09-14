@@ -11,6 +11,7 @@ def ob(vec, matrix):
 def prob(old, new, temp): 
     try: 
         math.exp(-(new-old)/(temp))
+        # print(math.exp(-(new-old)/(temp)))
     except OverflowError: 
         return 1
     return math.exp(-(new-old)/(temp))
