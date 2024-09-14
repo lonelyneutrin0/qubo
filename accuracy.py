@@ -1,6 +1,6 @@
 from stochastic_tunneling import stochastic_tunnel_optimize, ob
 from simulated_annealing import simulate_anneal_optimize
-from adaptive_annealing import adaptive_anneal
+from stochastic_tunneling import adaptive_anneal
 from stochastic_tunneling import transform
 import matplotlib.pyplot as plt
 import numpy as np 

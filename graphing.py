@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt 
 import numpy as np 
 from functions import ob, transform, prob
-from adaptive_annealing import adaptive_anneal
+from stochastic_tunneling import adaptive_anneal
 from simulated_annealing import simulate_anneal_optimize
 import itertools 
 import random
