@@ -19,4 +19,5 @@ Stochastic Tunneling, or STUN is an adaptation of Monte Carlo methods. It tackle
 ### Specific Implementation Parameters 
 Annealing Schedule: `Logarithmic` <br/> 
 Dynamic Parameter $$s = 10^b, b \in [0,1]$$ <br/> 
-Iterations: 10000
+Probability Condition: `Metropolis`
+Iterations: `10000`
