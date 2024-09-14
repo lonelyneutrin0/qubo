@@ -12,14 +12,25 @@ Because of its heavy reliance on randomness, the time taken to find optima can b
 ### Benchmark
 Benchmark tests were carried out on 10x10 matrices with sufficient iterations to get ~90% accuracy. <br/>
 Number of Trials: `100` <br/>
-Average Time: `9.48s`
+Average Time: `9.48s` <br/> 
+Number of Iterations: `100000` 
 ## Simulated Annealing with Stochastic Tunneling 
-Stochastic Tunneling, or STUN is an adaptation of Monte Carlo methods. It tackles the issue of long computation times by transforming the objective function in such a way that local minima are flattened and the global minimum is amplified. The transformation for an objective function f(x) is given by $$T(x) = 1-e^{-(f(x)-f(x_0))}$$ where $f(x_0)$ is the lowest function value found so far. It is possible to continuously transform the objective function or do so only when stuck at a local minimum.
+Stochastic Tunneling, or STUN is an adaptation of Monte Carlo methods. It tackles the issue of long computation times by transforming the objective function in such a way that local minima are flattened and the global minimum is amplified. The transformation for an objective function f(x) is given by $$T(x) = 1-e^{-s(f(x)-f(x_0))}$$ where $f(x_0)$ is the lowest function value found so far. The parameter `s` controls how much the function is warped. It is advised to tune this to a high value (~10) when $f(x_0)$ is close to the global minimum and keep it low otherwise.  In this implementation, the objective function will be dynamically transformed once a new candidate minimum is discovered. The parameter `s` will also gradually be increased as better candidates are found.
 
-The next phases of this project will aim to utilize simulated annealing paired with stochastic tunneling to optimize a wide range of QUBO problems. The hyperparameters of the project are <br/> 
-`Number of iterations` <br/>
-`STUN parameter` <br/>
-I will attempt to optimize them using the following methods: <br/> 
-### Adaptive Simulated Annealing
-### Bayesian Optimization
-### Machine Learning
+### Specific Implementation Parameters 
+Annealing Schedule: `Logarithmic` <br/> 
+Dynamic Parameter $$s = n$$ where `n` is the number of minima found so far <br/> 
+Probability Condition: `Metropolis` <br/>
+
+### Issues 
+Further performance improvements can likely be achieved through hyperparameter optimization of the number of iterations and dynamic parameter.
+
+### Benchmark
+Benchmark tests were carried out on 10x10 matrices with sufficient iterations to get ~90% accuracy. <br/>
+Number of Trials: `100` <br/> 
+Average Time: `0.6958s` <br/>
+Number of Iterations: `50000`
+
+### Overall Improvements 
+50% reduction in required iterations <br/>  
+1400% original time efficiency <br/>
