@@ -30,3 +30,7 @@ Benchmark tests were carried out on 10x10 matrices with sufficient iterations to
 Number of Trials: `100` <br/> 
 Average Time: `0.6958s` <br/>
 Number of Iterations: `50000`
+
+### Overall Improvements 
+50% reduction in required iterations <br/>  
+1400% of the original time efficiency <br/>
