@@ -33,4 +33,4 @@ Number of Iterations: `50000`
 
 ### Overall Improvements 
 50% reduction in required iterations <br/>  
-1400% of the original time efficiency <br/>
+1400% original time efficiency <br/>
