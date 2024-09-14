@@ -14,5 +14,5 @@ def prob(old, new, temp):
         return 1
     return math.exp(-(new-old)/(temp))
 
-def transform(vec, matrix, min): 
-    return 1-(math.exp(-10*(np.dot(vec, np.dot(matrix, vec))-min)))
+def transform(vec, matrix, min_val): 
+    return 1-(math.exp(-(np.dot(vec, np.dot(matrix, vec))-min_val)))
