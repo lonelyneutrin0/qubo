@@ -35,5 +35,4 @@ Number of Iterations: `50000`
 50% reduction in required iterations <br/>  
 1400% original time efficiency <br/>
 
-# Reactive Optimization 
-The next versions of this project will focus on implementing machine learning to optimize the hyperparamters of the SAST algorithm. 
+
